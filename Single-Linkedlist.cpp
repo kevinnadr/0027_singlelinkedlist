@@ -172,4 +172,27 @@ int main()
             mhs.traverse();   // Menampilkan semua data dalam list
         }
         break;
-
+        case '4':
+        {
+            if(mhs.listEmpty()== true) 
+            {
+                cout << "nList Kosong\n";   // Jika list kosong
+                break;
+            } 
+            Node *previous, *current;   // Penunjuk untuk node sebelumnya dan saat ini
+            cout << endl;
+            cout << "Masukkan No Mahasiswa yang dicari: ";
+            cin >> nim;   // Input NIM yang dicari
+            if(mhs.search(nim, &previous, &current)== false) 
+                cout << endl;
+                cout << "Data tidak ditemukan" << endl;   // Jika data tidak ditemukan 
+            else 
+            {
+                cout << endl;
+                cout << "Data ditemukan" << endl;   // Jika data ditemukan
+                cout << "\nNo Mahasiswa: " << current->noMhs << endl;   // Menampilkan NIM yang ditemukan
+                cout << "\n";
+            }
+        }
+        break;
+ 
