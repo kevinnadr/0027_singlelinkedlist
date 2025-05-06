@@ -41,3 +41,19 @@ public:
             START = NodeBaru;
             return;
         }
+
+        Node *previous = START;   // Penunjuk ke node sebelumnya
+        Node *current = START;    // Penunjuk untuk traversal
+
+        // Menemukan posisi penyisipan (harusnya nim > current->noMhs)
+        while ((current != NULL) && (nim > current->noMhs)) 
+        {
+            if (nim == current->noMhs) 
+            {
+                cout << "\nDuplikasi noMhs tidak diijinkan\n";
+                return;   // Gagal karena duplikasi
+            }
+            previous = current;        // Geser ke node berikutnya
+            current = current->next;
+        }
+
