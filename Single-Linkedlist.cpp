@@ -13,3 +13,18 @@ class LinkedList
 {
     Node* START;         // Pointer ke node pertama dalam linked list
 
+public:
+    LinkedList() 
+    {
+        START = NULL;    // Inisialisasi list kosong
+    }
+
+    void AddNode() 
+    {
+        int nim;
+        cout << "Masukkan Nomor Mahasiswa: ";
+        cin >> nim;      // Input NIM dari user
+
+        Node *NodeBaru = new Node();     // Membuat node baru
+        NodeBaru->noMhs = nim;           // Menyimpan NIM ke node
+        NodeBaru->next = NULL;           // Inisialisasi pointer next ke NULL
