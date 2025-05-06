@@ -9,3 +9,7 @@ public:
     Node* next;          // Pointer ke node berikutnya dalam list
 };
 
+class LinkedList 
+{
+    Node* START;         // Pointer ke node pertama dalam linked list
+
