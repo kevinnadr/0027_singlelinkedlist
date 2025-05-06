@@ -91,3 +91,13 @@ public:
             cout << "\nNode dengan noMhs " << nim << " tidak ditemukan\n";
             return false;   // Node tidak ditemukan
         }
+
+        // Jika node yang akan dihapus adalah node pertama
+        if (current == START) 
+            START = START->next;  // Geser START ke node berikutnya
+        else 
+            previous->next = current->next;  // Hubungkan previous ke node berikutnya
+        
+        delete current;   // Hapus node yang ditemukan
+        return true;     // Node berhasil dihapus
+    }
