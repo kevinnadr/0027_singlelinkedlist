@@ -142,3 +142,10 @@ int main()
         cout << "Pilih menu: ";
         cin >> ch;   // Input pilihan user
         switch(ch) 
+        {
+            case '1':
+            {
+                mhs.AddNode();   // Menambah node baru
+            }
+            break;
+
