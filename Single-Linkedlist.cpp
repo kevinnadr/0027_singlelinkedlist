@@ -57,3 +57,12 @@ public:
             current = current->next;
         }
 
+        // Sisipkan NodeBaru di antara previous dan current
+        NodeBaru->next = current;
+        previous->next = NodeBaru;
+    }
+
+    bool listEmpty() 
+    {
+        return (START == NULL);   // Mengembalikan true jika list kosong
+    }
