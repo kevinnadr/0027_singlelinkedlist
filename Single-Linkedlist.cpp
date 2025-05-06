@@ -81,3 +81,13 @@ public:
         return (*current != NULL);   // True jika ditemukan
     }
     
+    bool delNode(int nim) 
+    {
+        Node *current, *previous;   // Penunjuk untuk node sebelumnya dan saat ini
+
+        // Cari node yang akan dihapus
+        if (!search(nim, &previous, &current)) 
+        {
+            cout << "\nNode dengan noMhs " << nim << " tidak ditemukan\n";
+            return false;   // Node tidak ditemukan
+        }
