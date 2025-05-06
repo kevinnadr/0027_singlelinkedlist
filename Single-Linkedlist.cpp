@@ -167,4 +167,9 @@ int main()
                     cout << "Data dengan nomor mahasiswa" << nim << " berhasil dihapus" << endl; // Jika data berhasil dihapus
         }
         break;
- 
+        case '3':
+        {
+            mhs.traverse();   // Menampilkan semua data dalam list
+        }
+        break;
+
