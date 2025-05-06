@@ -28,3 +28,16 @@ public:
         Node *NodeBaru = new Node();     // Membuat node baru
         NodeBaru->noMhs = nim;           // Menyimpan NIM ke node
         NodeBaru->next = NULL;           // Inisialisasi pointer next ke NULL
+
+        // Jika list kosong atau NIM lebih kecil dari node pertama
+        if (START == NULL || nim <= START->noMhs) 
+        {
+            if ((START != NULL) && (nim == START->noMhs)) 
+            {
+                cout << "\nDuplikasi noMhs tidak diijinkan\n";
+                return;   // Gagal karena duplikasi
+            }
+            NodeBaru->next = START;  // Sisipkan di awal list
+            START = NodeBaru;
+            return;
+        }
