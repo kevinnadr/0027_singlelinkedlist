@@ -101,3 +101,23 @@ public:
         delete current;   // Hapus node yang ditemukan
         return true;     // Node berhasil dihapus
     }
+
+    void traverse() 
+    {
+        if (listEmpty()) 
+        {
+            cout << "\nList Kosong\n";   // Jika list kosong
+        }
+        else 
+        {
+            cout << "\nData didalam list adalah:\n";
+            Node *currentNode = START;   // Penunjuk untuk traversal
+            while (currentNode != NULL) 
+            {
+                cout << currentNode->noMhs << endl;   
+                currentNode = currentNode->next;   
+            }
+            cout << endl;   // Baris baru setelah traversal
+        }
+    }
+};
