@@ -195,4 +195,16 @@ int main()
             }
         }
         break;
- 
+        case '5':
+        {
+            exit(0);   // Menghentikan program
+        }
+        break;
+        default:
+        {
+            cout << "Pilihan salah !." << endl;   
+        }
+        break;
+        }
+    }
+}
