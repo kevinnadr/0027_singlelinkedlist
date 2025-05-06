@@ -121,3 +121,24 @@ public:
         }
     }
 };
+
+int main()
+{
+    LinkedList mhs;
+    int nim;
+    char ch;   // Variabel untuk menyimpan pilihan user
+    while(1)
+    {
+        cout << endl;   // Baris baru untuk tampilan menu
+        cout << "Menu:" ;
+        cout << endl;   // Baris baru
+        cout << "1. Menambah data kedalam list" << endl;
+        cout << "2. menghapus data dari dalam list" << endl;
+        cout << "3. Menampilkan semua data di dalam List" << endl;
+        cout << "4. Mencari data kedalam list" << endl;
+        cout << "5. Keluar" << endl;
+        cout << endl;   // Baris baru
+        cout << "Masukkan pilihan (1 - 5): ";
+        cout << "Pilih menu: ";
+        cin >> ch;   // Input pilihan user
+        switch(ch) 
